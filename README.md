@@ -13,6 +13,10 @@
 - `index.html`：首頁
 - `notes.html`：每週筆記列表
 - `notes/beer-game.html`：啤酒遊戲筆記
+- `notes/pine-inn.html`：松林客棧個案筆記
+- `notes/swot.html`：10/2 SWOT 與策略選擇筆記，含響應式四格圖、方案路徑及紡織產業流程
+- `notes/people-express.html`：10/16 人民航空課堂筆記與經營成果，含作業回答、趨勢圖與 CSV 下載
+- `people_express_note.py`：人民航空內容產生器，由 `build.py` 呼叫；成果讀取 `assets/people-express/` 內封存報表
 - `project.html`：期末專題
 - `exercise.html`：彈性週作業
 - `assets/styles.css`：字體、配色及手機版樣式
@@ -30,7 +34,7 @@
 
 編輯 `build.py`，執行 `python3 build.py`，再一併提交產生的 HTML 與資料檔。
 
-上課日期尚未確認：修改 `DATE = None` 為確定的 ISO 日期。新增筆記時，在 `build.py` 加入新文章內容與列表連結。個人心得與期末題目尚未提供，頁面已有明確待補標示，未把示意資料當作真實內容。
+啤酒遊戲、松林客棧及 SWOT 的上課日期分別由 `BEER_GAME_DATE`、`PINE_INN_DATE`、`SWOT_DATE` 設定，使用 ISO 日期格式。新增筆記時，在 `build.py` 加入新文章內容與列表連結。期末題目尚未提供，頁面保留待補標示。
 
 ## GitHub Pages 部署
 
@@ -47,7 +51,7 @@
 
 啤酒遊戲數據從使用者提供的課堂照片 IMG_8218、IMG_8217 人工轉錄，記錄的是課堂工廠角色報表，不宣稱是個人操作結果。第 13 週訂購量空白，以 null 表示，圖表不補零。負庫存依照片紅色括號轉為負號。所有數字應以老師的原始報表為準。
 
-原始課堂照片未公開上傳。網站只使用轉錄後的課堂數據；個人心得保留待填問題。
+啤酒遊戲頁面保留課堂週報告照片及轉錄數據。SWOT 頁面依 2026/10/2 白板照片（IMG_9310–IMG_9314）重繪圖解，未加入原始白板照片。路徑圖為概念示意，沒有量化縱軸；紡織流程僅呈現板書中的環節。講義延伸以可展開的區塊標示，心得以重新整理筆記的角度撰寫。人民航空頁面在可展開區塊附上 10/16 課堂白板照片三張（`assets/people-express/whiteboard-1016-*.jpg`）。
 
 ## 作品使用
 
