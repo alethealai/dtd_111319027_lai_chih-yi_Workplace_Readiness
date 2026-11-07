@@ -45,6 +45,7 @@ save('index.html',page('學期學習紀錄','''
 save('notes.html',page('每週筆記',f'''
 <header class="page-intro"><div class="eyebrow">01 / CLASS NOTES</div><h1>每週筆記</h1><p>把課堂中的提問、嘗試與發現，<br>整理成可以回看的學習紀錄。</p></header>
 <section aria-label="課堂筆記列表">
+<a class="note-row" href="notes/archetypes.html"><div class="note-date">2026-11-06</div><div><h2>系統基模（四）～（九）</h2><p>目標侵蝕、惡性競爭、富者愈富、共同的悲劇、飲鴆止渴，到投資與成長不足：用趨勢圖看懂六種反覆出現的結構。</p><div class="tags"><span>系統思考</span><span>系統基模</span><span>增強環路</span></div></div><span class="arrow" aria-hidden="true">↗</span></a>
 <a class="note-row" href="notes/people-express.html"><div class="note-date">2026-10-16</div><div><h2>人民航空：成長、擴張與獲利</h2><p>從解除管制與服務能力，走進40季經營練習：擴張、修正，再找回獲利。</p><div class="tags"><span>系統思考</span><span>經營模擬</span><span>成長限制</span></div></div><span class="arrow" aria-hidden="true">↗</span></a>
 <a class="note-row" href="notes/swot.html"><div class="note-date">{SWOT_DATE}</div><div><h2>SWOT：從方案到策略選擇</h2><p>先有方案，再進行評估。從內外部條件、未來路徑與產業位置，整理決策的依據。</p><div class="tags"><span>SWOT 分析</span><span>策略選擇</span><span>產業價值鏈</span></div></div><span class="arrow" aria-hidden="true">↗</span></a>
 <a class="note-row" href="notes/pine-inn.html"><div class="note-date">{pine_inn_date_label}</div><div><h2>松林客棧：營運管理與決策</h2><p>從顧客需求與營運資料，思考餐廳應如何找出問題並制定策略。</p><div class="tags"><span>經營管理</span><span>顧客需求</span><span>數據決策</span></div></div><span class="arrow" aria-hidden="true">↗</span></a>
@@ -192,4 +193,6 @@ save('404.html',page('找不到頁面','''<header class="page-intro"><div class=
 save('assets/beer-game-data.json',json.dumps({'source':'課堂照片 IMG_8218、IMG_8217，工廠週報告','columns':['week','arrivals','inventory','demand','orders'],'rows':data},ensure_ascii=False,indent=2))
 from people_express_note import render_note
 save('notes/people-express.html', page('人民航空：成長、擴張與獲利', render_note(ROOT), 'notes', 1, '10/16 課堂筆記與人民航空40季模擬：策略組合、擴張轉折、最終成果與學習反思。'))
-print('Built 9 static pages and classroom data. No external build dependencies.')
+from archetypes_note import render_note as render_archetypes
+save('notes/archetypes.html', page('系統基模（四）～（九）', render_archetypes(COURSE), 'notes', 1, '11/6 課堂筆記：系統基模四到九的特性、例子、對策與趨勢圖。'))
+print('Built 10 static pages and classroom data. No external build dependencies.')

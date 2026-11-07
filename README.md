@@ -16,6 +16,8 @@
 - `notes/pine-inn.html`：松林客棧個案筆記
 - `notes/swot.html`：10/2 SWOT 與策略選擇筆記，含響應式四格圖、方案路徑及紡織產業流程
 - `notes/people-express.html`：10/16 人民航空課堂筆記與經營成果，含作業回答、趨勢圖與 CSV 下載
+- `notes/archetypes.html`：11/6 系統基模（四）～（九）筆記，含六張趨勢示意圖與 IC／人力曲線
+- `archetypes_note.py`：系統基模筆記內容產生器，由 `build.py` 呼叫
 - `people_express_note.py`：人民航空內容產生器，由 `build.py` 呼叫；成果讀取 `assets/people-express/` 內封存報表
 - `project.html`：期末專題
 - `exercise.html`：彈性週作業
